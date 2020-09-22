@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <title> Contact Me Page
+        </title>
+    </head>
+    
+    <body>
+       <p style="text-align:center">
+        <iframe title="Greatest GK ever" width="560" height="315"
+        src="https://www.youtube.com/embed/8F9jXYOH2c0" 
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+        </p>
+        <form id= "information">
+            <fieldset id= "feedback">
+                <legend> <b>Feedback</b> </legend>
+                <label for="fname"><b>First Name: </b></label> 
+                <input type="text" id="fname" name="name" placeholder="anonymous" required/>
+                <br/>
+                <label for="lname"><b>Last Name: </b></label> 
+                <input type="text" id="lname" name="name" placeholder="anonymous" required/>
+                <br/>
+                <label for="email"><b>Email: </b></label> 
+                <input type= "email" id="email" name= "email" placeholder= "name@domain.com" required />
+                <br/>
+                <b>Would you recommend this site to someone else? </b>
+                <input type= "radio" id="yes" name="radio" value= "Yes" checked> Yes <input type= "radio" id="no" name="radio" value= "No"> No <br>
+                <label for="favorite_site"><b>What is your favorite website?</b></label>
+                <select name="favorite_site" id="favorite_site" required>
+                    <option value="">Choose</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="twitter">Twitter</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="snapchat">Snapchat</option>
+                </select><br/>
+                <label for="range"> <b>Please rate the site!</b> </label><br/>
+                <b>1</b><input type="range" id="range" name="range" value="5" min="1" max="10"><b>10</b>
+            <br/>
+                <label for="comments"> <b>Additional Comments</b> </label><br/>
+                <textarea placeholder="Feel free to write anything!" id="comments" name="add_comments" rows="10" cols="30" required></textarea>
+                <br/>
+                <input type="submit" name="submit" id="submit_query" value="Submit">
+                <input type="reset" name="reset" id="reset_query" value="Reset">
+            </fieldset>
+        </form>
+        
+
+
+    </body>
+</html>
