@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <title> Contact Me Page
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         <link rel="stylesheet" href=" css/contact.css ">
+    </head>
+    
+    <body>
+     <div class= wrap>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-dark">
+            <ul class="font-weight-bold">
+                <li class="pl-2 pr-2 py-1"><a class="text-white" href= "index.html"> Main Page</a></li>
+                <li class="pl-2 pr-2 py-1"><a class="text-white" href= https://www.usca.edu/>USCA Homepage  </a></li>
+            </ul>
+          </nav>
+        <div class= video>
+           <p>
+           <iframe title="Greatest GK ever" width="560" height="315"
+           src="https://www.youtube.com/embed/8F9jXYOH2c0" 
+           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-circle">
+           </iframe>
+           </p>
+        </div>
+        <div class= main> 
+         <div class= "form-group">    
+          <form id= "information">
+            <fieldset id= "feedback">
+                <legend> </legend>
+                <label for="fname"><b>First Name: </b></label> 
+                <input type="text" id="fname" name="name" class="form-control py-2 px-2" placeholder="anonymous" style= "width: 300px" required/>
+                <br/>
+                <label for="lname"><b>Last Name: </b></label> 
+                <input type="text" id="lname" name="name" class="form-control py-2 px-2" placeholder="anonymous" style= "width: 300px" required/>
+                <br/>
+                <label for="email"><b>Email: </b></label> 
+                <input type= "email" id="email" name= "email" class="form-control py-2 px-2" placeholder= "name@domain.com" style= "width: 400px" required />
+                <br/>
+                <label class="font-weight-bold">Would you recommend this site to someone else? </label>
+                <div class="form-check">
+                <input type= "radio" id="yes" class="form-check-input py-2 px-2" name="radio" value= "Yes" checked> 
+                <label for="yes" class="form-check-label">Yes</label>
+                </div>
+                <div class="form-check">
+                <input type= "radio" id="no" class="form-check-input py-2 px-2" name="radio" value= "No">
+                <label for="no" class="form-check-label">No</label>
+                </div>
+                <br>
+                <label for="favorite_site" class="font-weight-bold well">What is your favorite website?</label>
+                <select name="favorite_site" class="form-control" id="favorite_site" style= "width: 300px" required>
+                    <option value="">Choose</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="twitter">Twitter</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="snapchat">Snapchat</option>
+                </select>
+                <br>
+                <label for="range"> <b>Please rate the site!</b> </label><br/>
+                <input type="range" id="range" class="form-control-range" style= "width: 300px" name="range" value="5" min="1" max="10">
+            <br/>
+                <label for="inputPassword" class="font-weight-bold well">Password: </label>
+                <input type="password" id="inputPassword" class="form-control" style= "width: 300px" aria-describedby="passwordHelpBlock">
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                   Your password must contain 8-20 characters with at least 1 special character. 
+                </small>
+                <br>
+                <label class="form-check-label font-weight-bold well" for="comments"> Additional Comments: </label><br>
+                <textarea placeholder="Feel free to write anything!" id="comments" name="add_comments" class= form-control style= "width: 400px" required></textarea>
+                <br/>
+                <input type="submit" name="submit" id="submit_query" value="Submit" class="btn btn-primary">
+                <input type="reset" name="reset" id="reset_query" value="Reset" class="btn btn-danger">
+            </fieldset>
+           </form>
+        </div>
+        </div>
+        </div>
+    </body>
+</html>
