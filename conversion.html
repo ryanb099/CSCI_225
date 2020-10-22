@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type"> 
+<title>  CSCI Conversion Page
+</title>
+</head>
+<body>
+    <div class= "calculation">
+        <h1>Unit Conversion Calculator- Length<br></h1>
+        <label id="inputVal">
+             <input type="text" id="input" name="number" class="form-control py-2 px-2" placeholder="Input a number" style= "width: 300px" required />
+        </label>
+        <select name="measure" class="form-control" id="measure" style= "width: 150px" required>
+                <option value="">Choose</option>
+                <option value="foot">Foot</option>
+                <option value="inch">Inch</option>
+                <option value="meter">Meter</option>
+                </select>
+        <input type="button" id="convert" value="=" onclick="feetToInches()">
+        <label id="results"> </label>
+             <input type="text" id='result' name="number2" class="form-control py-2 px-2" style= "width: 300px" required/>
+
+        <select name="measure2" class="form-control" id="measure2" style= "width: 150px" required>
+                <option value="">Choose</option>
+                <option value="foot">Foot</option>
+                <option value="inch">Inch</option>
+                <option value="meter">Meter</option>
+                </select>
+                
+        
+        <script>
+            function feetToInches() {
+                var inputValue = document.getElementById('measure').value;
+                var retVal = document.getElementById('measure2').value;
+      //input
+                 var num1 =parseFloat(document.getElementsByName('number')[0].value);
+       //process
+                if (inputValue=="foot" && retVal=="inch")
+                {
+                    var ans = (num1*12);
+                }
+                else if (inputValue=="inch" && retVal=="foot")
+                {
+                    var ans = (num1/12);
+                }
+                else if (inputValue=="foot" && retVal=="meter")
+                {
+                    var ans = (num1/ 3.281);
+                }
+                else if (inputValue=="meter" && retVal=="foot")
+                {
+                    var ans = (num1* 3.281);
+                }
+                else if (inputValue=="inch" && retVal=="meter")
+                {
+                    var ans = (num1/ 39.370);
+                }
+                else if (inputValue=="meter" && retVal=="inch")
+                {
+                    var ans = (num1 * 39.370);
+                }
+                  
+                  document.getElementById('result').value = " "+ ans;
+    }
+         </script>
+    </div>
+
+
+
+
+
+
+</body>
