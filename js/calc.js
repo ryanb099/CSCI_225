@@ -42,9 +42,8 @@
         function amort(balance, interestRate, years)
         {
             //Calculate the per month interest rate
-            var annualInterest= 0;
-            var principal= 0;
-            var total= 0;
+            var annualinterest= 0;
+            var annualPrincipal= 0;
             var month;
             var monthlyRate = interestRate/12;
             var months= years *12;
@@ -63,35 +62,37 @@
              * Loop that calculates the monthly Loan amortization amounts then adds 
              * them to the return string 
              */
+           
             for (var count = 0; count < years; ++count)
             { 
-                //in-loop interest amount holder
-                var interest = 0;
+                var interest = balance * monthlyRate; 
+                var monthlyPrincipal = payment - interest; //They will not work outside the loop, and they make it worse inside the second loop. 
                 
-                //in-loop monthly principal amount holder
-                var monthlyPrincipal = 0;
-
-                var annual=0;
                 //start a new table row on each loop iteration
                 result += "<tr align=left>";
                 
                 //display the month number in col 1 using the loop count variable
                 result += "<td>" + (count + 1) + "</td>";
-                
                 //code for displaying in loop balance
-                for (month=1; month<=months; month++)
+                for (month=1; month<=12; month++) 
                 {
-                    interest = balance * monthlyRate;
-                    monthlyPrincipal = payment - interest;
-                    total = balance - monthlyPrincipal;
-                    
+                               // this is the monthly interest -- you need //accumulate annual interest. Did that and still does not work
+                    annualinterest += interest
+                        // this is the monthly principal  -- you need //accumulate annual principal paid. Did that and still does not work
+                    annualPrincipal += monthlyPrincipal
+                    balance = balance - monthlyPrincipal;
+                   // The balance need to be updated each month not             // after a year
+                                                                                // please change to 
+                                                                                // balance = balance - monthlyPrincipal.  Did that and still does not work. 
                 }
-                balance= total;
+                
+                //I dont understand how it still wont work. I even implemented your help and still wont work right. 
+                
                 //calc the in-loop interest amount and display
-                result += "<td> $" + interest.toFixed(2) + "</td>";
+                result += "<td> $" + annualinterest.toFixed(2) + "</td>";
                 
                     //calc the in-loop monthly principal and display
-                result += "<td> $" + monthlyPrincipal.toFixed(2) + "</td>";
+                result += "<td> $" + annualPrincipal.toFixed(2) + "</td>";
                         //update the balance for each loop iteration
                 result += "<td> $" + balance.toFixed(2) + "</td>";
                     
